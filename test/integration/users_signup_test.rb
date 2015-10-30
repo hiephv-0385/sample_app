@@ -39,7 +39,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                password:              "password",
                                password_confirmation: "password" }
     end
-    debugger
     assert_equal 2, ActionMailer::Base.deliveries.size
     user = assigns(:user)
     assert_not user.activated?
